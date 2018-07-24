@@ -1,0 +1,91 @@
+:root {
+    --animTime: 120s;
+    --inES: calc(95% - 20px);
+    --inN: 55px;
+	--sumES: calc(95% - 30px);
+	--sumS: calc(10px + 95%);
+	--inWidth: 200px;
+	
+	--pol00: polygon(	30px 35px,	95% 35px,	95% var(--sumS),  210px var(--sumS),	210px 100%,
+	50px 100%,	50px var(--sumES),	var(--sumES) var(--sumES),	var(--sumES) 65px,	30px 65px);
+	--pol01: polygon(	30px 35px,	95% 35px,	95% var(--sumS),  210px var(--sumS), 	210px var(--sumS),
+	50px var(--sumS),	50px var(--sumES),	var(--sumES) var(--sumES),	var(--sumES) 65px,	30px 65px);
+	--pol02: polygon(	30px 35px,	95% 35px,  95% var(--sumS), 210px var(--sumS), 	210px var(--sumS),
+	50px var(--sumES),	50px var(--sumES),	var(--sumES) var(--sumES),	var(--sumES) 65px,	30px 65px);
+	--pol03: polygon(	30px 35px,	95% 35px,	95% var(--sumS),	210px var(--sumS),	210px var(--sumS),
+	210px var(--sumES),	210px var(--sumES),	var(--sumES) var(--sumES),	var(--sumES) 65px,	30px 65px);
+	--pol04: polygon(	30px 35px,	95% 35px, 	95% var(--sumS),	var(--sumES) var(--sumS), 	var(--sumES) var(--sumS),
+	var(--sumES) var(--sumES),	var(--sumES) var(--sumES),	var(--sumES) var(--sumES),	var(--sumES) 65px,	30px 65px);	
+  }
+
+
+.shadow {
+	position: absolute;
+	width: 100%;
+	height:100%;
+	top: 0;
+    left: 0;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+	filter: drop-shadow(0px 0px 5px rgba(255,255,255,0.2));
+}
+
+.bar{
+	width: 100%;
+	height:100%;
+	background-color: #224;
+	filter: blur(1px);
+	
+	clip-path: polygon(	30px 35px,		
+						var(--inES) 35px,95% var(--inN),
+						95% var(--inES),var(--inES) 95%, 	
+						calc(10px + var(--inWidth)) 95%, var(--inWidth) var(--sumS),		 
+						var(--inWidth) 100%, 
+						50px 100%, 	
+						50px 95%, 70px var(--inES), 		
+						var(--sumES) var(--inES), var(--inES) var(--sumES),		
+						var(--inES) 65px, var(--sumES) var(--inN),		
+						30px var(--inN));
+}
+
+#energy{
+	width: 100%;
+	height:100%;
+}
+
+.anim{
+	clip-path: polygon(	30px 35px,	30px 35px, 	30px 35px, 	30px 35px, 	30px 35px,
+					30px 65px, 	30px 65px,	30px 65px,	30px 65px,	30px 65px);
+	
+	animation: energy var(--animTime) 1, blinking 1s infinite alternate;
+	animation-timing-function: linear;
+	
+}
+
+@keyframes energy{
+	0%	{clip-path: var(--pol00)}
+		
+	6%	{clip-path: var(--pol01)}
+	8%	{clip-path: var(--pol02)}
+	10%	{clip-path: var(--pol03)}
+
+	40%	{clip-path: var(--pol04)}
+	40.5%	{clip-path: polygon(	30px 35px,	95% 35px,	95% var(--sumS), 	95% var(--sumS),	95% var(--sumS),
+		var(--sumES) var(--sumES),	var(--sumES) var(--sumES),	var(--sumES) var(--sumES),	var(--sumES) 65px,	30px 65px);	}
+	41%	{clip-path: polygon(	30px 35px,	95% 35px,	95% var(--sumES),	95% var(--sumES), 	95% var(--sumES),
+		var(--sumES) var(--sumES),	var(--sumES) var(--sumES),	var(--sumES) var(--sumES),	var(--sumES) 65px,	30px 65px);}
+
+	65%	{clip-path: polygon(	30px 35px,	95% 35px,	95% 65px,	95% 65px,	95% 65px,
+		var(--sumES) 65px,	var(--sumES) 65px,	var(--sumES) 65px,	var(--sumES) 65px,	30px 65px);}
+	65.5%	{clip-path: polygon(	30px 35px,	95% 35px,	95% 35px,	95% 35px,	95% 35px, 
+		var(--sumES) 65px,	var(--sumES) 65px,	var(--sumES) 65px,	var(--sumES) 65px,	30px 65px);}
+	66%	{clip-path: polygon(	30px 35px,	var(--sumES) 35px,	var(--sumES) 35px,	var(--sumES) 35px, 	var(--sumES) 35px,
+		var(--sumES) 65px,	var(--sumES) 65px,	var(--sumES) 65px,	var(--sumES) 65px,	30px 65px);}
+
+	100%{clip-path: polygon(	30px 35px,	30px 35px, 	30px 35px,	30px 35px,	30px 35px,
+		30px 65px,	30px 65px,	30px 65px,	30px 65px,	30px 65px);}
+}
+
+@keyframes blinking {
+    from {background-color: #080;}
+    to {background-color: #161;}
+}

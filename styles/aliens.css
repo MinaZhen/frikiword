@@ -1,0 +1,87 @@
+:root {
+    --img-size: 180px;
+    --f: -31px;
+    --h: -61px;
+    --hf: -91px;
+    --th: -121px;
+    --thf: -151px;
+}
+
+#round {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    align-content: center;
+    justify-content: space-around;
+	width: 70%;
+    height: 100%;
+	animation: moveAliens 5s infinite alternate;
+}
+
+@keyframes moveAliens{
+	from {transform: translateX(-10%)}
+	to{transform: translateX(10%)}
+}
+
+
+.ball {
+	height: calc(-1 * var(--f));
+	width: calc(-0.9 * var(--f));
+	margin: 3px 10px;
+	filter: hue-rotate(100deg);
+}
+
+#_a { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--h) 0px;
+	background-size: var(--img-size); filter: hue-rotate(50deg)  saturate(2);}
+#_b { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--hf) 0px;
+	background-size: var(--img-size); filter: hue-rotate(60deg)  saturate(2);}
+#_c { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--th) 0px;
+	background-size: var(--img-size); filter: hue-rotate(70deg)  saturate(2);}
+#_d { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--thf) 0px;
+	background-size: var(--img-size); filter: hue-rotate(80deg)  saturate(2);}
+#_e { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--f) var(--f);
+	background-size: var(--img-size); filter: hue-rotate(90deg)  saturate(2);}
+#_f { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--h) var(--f);
+	background-size: var(--img-size); filter: hue-rotate(100deg)  saturate(2);}
+#_g { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--hf) var(--f);
+	background-size: var(--img-size); filter: hue-rotate(110deg)  saturate(2);}
+#_h { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--th) var(--f);
+	background-size: var(--img-size); filter: hue-rotate(120deg)  saturate(2);}
+#_i { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--thf) var(--f);
+	background-size: var(--img-size); filter: hue-rotate(130deg)  saturate(2);}
+#_j { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) 0px var(--h);
+	background-size: var(--img-size); filter: hue-rotate(140deg)  saturate(2);}
+#_k { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--f) var(--h);
+	background-size: var(--img-size); filter: hue-rotate(150deg)  saturate(2);}
+#_l { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--h) var(--h);
+	background-size: var(--img-size); filter: hue-rotate(160deg)  saturate(2);}
+#_m { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--hf) var(--h);
+	background-size: var(--img-size); filter: hue-rotate(170deg)  saturate(2);}
+#_n { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--th) var(--h);
+	background-size: var(--img-size); filter: hue-rotate(180deg)  saturate(2);}
+#_ny { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--thf) var(--h);
+	background-size: var(--img-size); filter: hue-rotate(190deg)  saturate(2);}
+#_o { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) 0px var(--hf);
+	background-size: var(--img-size); filter: hue-rotate(200deg)  saturate(2);}
+#_p { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--f) var(--hf);
+	background-size: var(--img-size); filter: hue-rotate(210deg)  saturate(2);}
+#_q { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--h) var(--hf);
+	background-size: var(--img-size); filter: hue-rotate(220deg)  saturate(2);}
+#_r { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--hf) var(--hf);
+	background-size: var(--img-size); filter: hue-rotate(230deg)  saturate(2);}
+#_s { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--th) var(--hf);
+	background-size: var(--img-size); filter: hue-rotate(240deg)  saturate(2);}
+#_t { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--thf) var(--hf);
+	background-size: var(--img-size); filter: hue-rotate(250deg)  saturate(2);}
+#_u { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) 0px var(--th);
+	background-size: var(--img-size); filter: hue-rotate(260deg)  saturate(2);}
+#_v { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--f) var(--th);
+	background-size: var(--img-size); filter: hue-rotate(270deg)  saturate(2);}
+#_w { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--h) var(--th);
+	background-size: var(--img-size); filter: hue-rotate(280deg)  saturate(2);}
+#_x { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--hf) var(--th);
+	background-size: var(--img-size); filter: hue-rotate(290deg)  saturate(2);}
+#_y { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--th) var(--th);
+	background-size: var(--img-size); filter: hue-rotate(300deg)  saturate(2);}
+#_z { background: url(../img/frikipalabra.png) 0px var(--f), url(../img/frikipalabra.png) var(--thf) var(--th);
+	background-size: var(--img-size); filter: hue-rotate(310deg) saturate(2);}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Frikipalabra</title>
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/energy.css">
+        <link rel="stylesheet" href="styles/aliens.css">
+        <link rel="stylesheet" href="styles/reponsive.css" />
+        <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    </head>
+    <body>
+        <div class="shadow energy"><div class="bar energy"><div id="energy" class="anim"></div></div></div>
+        <main>
+            <section class="section-left">
+                <article class="top">
+                    <div><p id="current-letter" class="text-cell"></p></div>
+                    <div id="counter-pass" class="counter"> <p class="text-cell">StandBy</p> </div>
+                    <div><p class="text-cell" id="timer-desktop"></p></div>
+                </article>
+                <article class="questions-place">
+                    <div class="questions">
+                        <p id="questions"></p>
+                    </div>   
+                    <div class="answer">
+                        <div><input id="input" type="resp" name="resp" placeholder="···" id="input" onkeyup="enter(event)"></div>
+                        
+                        <div class="buttons">
+                            <button class="bEnter" onclick="bEnter()">Enter </button>
+                            <button class="bPass" onclick="bPass()">Pass</button>
+                            <button class="bExit" onclick="bExit()">Exit </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="bottom">
+                    <div id="counter-wrong" class="counter"><p class="text-cell">Wrong</p></div>
+                    <div><div class='logo'></div></div>
+                    <div id="counter-ok" class="counter"><p class="text-cell">Guessed</p></div>
+                </article>
+                <div class="stats">
+                    <div>Status</div> 
+                    <div id="stats-bars"></div>
+                    <div id="timer-mobile"></div> 
+                </div>
+            </section>
+            <section class="section-right">
+                <article class="screen">
+                    <div id="scores"></div>
+                    <div id="round">
+                        <div class="ball" id="_a"></div>
+                        <div class="ball" id="_b"></div>
+                        <div class="ball" id="_c"></div>
+                        <div class="ball" id="_d"></div>
+                        <div class="ball" id="_e"></div>
+                        <div class="ball" id="_f"></div>
+                        <div class="ball" id="_g"></div>
+                        <div class="ball" id="_h"></div>
+                        <div class="ball" id="_i"></div>
+                        <div class="ball" id="_j"></div>
+                        <div class="ball" id="_k"></div>
+                        <div class="ball" id="_l"></div>
+                        <div class="ball" id="_m"></div>
+                        <div class="ball" id="_n"></div>
+                        <div class="ball" id="_ny"></div>
+                        <div class="ball" id="_o"></div>
+                        <div class="ball" id="_p"></div>
+                        <div class="ball" id="_q"></div>
+                        <div class="ball" id="_r"></div>
+                        <div class="ball" id="_s"></div>
+                        <div class="ball" id="_t"></div>
+                        <div class="ball" id="_u"></div>
+                        <div class="ball" id="_v"></div>
+                        <div class="ball" id="_w"></div>
+                        <div class="ball" id="_x"></div>
+                        <div class="ball" id="_y"></div>
+                        <div class="ball" id="_z"></div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        
+    <script src="scripts/questions.js"></script>
+    <script src="scripts/logic.js"></script>
+    <script src="scripts/main.js"></script>
+    </body>
+</html>
